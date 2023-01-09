@@ -6,7 +6,7 @@ from utilities.config_parser import ReadConfig
 from utilities.driver_factory import DriverFactory
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture()
 def create_driver():
     driver = DriverFactory.create_driver(driver_id=ReadConfig.get_driver_id())
     driver.maximize_window()
